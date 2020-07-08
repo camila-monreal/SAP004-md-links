@@ -1,8 +1,8 @@
 # Witches purple photos Links 
 
 ## Photos:
-
-* link 1
-* link 2
-* link 3
-* link 4
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+* link 2 - https://stackabuse.com/read-files-with-node-js/
+* link 3 - https://www.alura.com.br/artigos/criando-e-publicando-uma-biblioteca-javascript-no-npm
+* link 4 - https://trello.com/
+batata

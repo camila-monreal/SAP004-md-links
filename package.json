@@ -9,7 +9,12 @@
   "bin": {
     "md-links": "./bin/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.88.2",
+    "url": "^0.11.0",
+    "valid": "^0.1.1",
+    "valid-url": "^1.0.9"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "npm test"

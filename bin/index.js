@@ -12,6 +12,7 @@ function readFile() {
         const links = selectLinks(data);
         console.log(links);
         validateLinks(links);
+
     });
 }
 readFile();
@@ -40,9 +41,11 @@ function getLinkRegex(line) {
 function validate(link) {
     const request = require('request');
     request(link, function (error, response, body) {
-        console.error('error:', error);
+        console.error('link status error:', error);
         console.log('statusCode:', response && response.statusCode);
-       //console.log('body:', body); 
+        const bodyHtml = body
+        getCharacters(bodyHtml);
+        stats(link);
     });
 }
 
@@ -50,4 +53,31 @@ function validateLinks(links) {
     links.forEach(function (link) {
         validate(link);
     });
+}
+
+function getCharacters(bodyHtml) {
+    const jsdom = require("jsdom");
+    const { JSDOM } = jsdom;
+    const dom = new JSDOM(bodyHtml);
+    const content = dom.window.document
+    const characters = 'Title: ' + content.querySelector('title').textContent;
+    console.log(characters.substr(0 - 50));
+}
+
+function stats(links, textContent) {
+    const allLinks = links.map((i) => i.href);
+    const brokenLinks = links.filter((i) => i.statusCode > 400 && i.statusCode < 500);
+    if (textContent == null) {
+        const notFoundLinks = links
+        stateErrorResult = {
+            notFound: notFoundLinks.length
+        };
+        console.log(statsErrorResult);
+    }
+    const statsResult = {
+        all: allLinks.length,
+        broken: brokenLinks.length,
+
+    };
+    console.log(statsResult);
 }

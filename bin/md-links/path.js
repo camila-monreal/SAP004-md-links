@@ -1,7 +1,8 @@
 function userInput() {
     const arguments = process.argv;
-    const path = arguments.splice(2, process.argv.length - 1).join(' '); 
-    return path;
+    const path = arguments[2];
+    const options = arguments.splice(3, 3);
+    return { path: path, options: options };
 }
 
 module.exports = userInput;

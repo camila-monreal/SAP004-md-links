@@ -1,4 +1,7 @@
 function getCharacters(body) {
+    if (body == '') {
+        return '';
+    }
     const jsdom = require("jsdom");
     const { JSDOM } = jsdom;
     const dom = new JSDOM(body);

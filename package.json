@@ -2,12 +2,12 @@
   "name": "md-links",
   "version": "0.1.0",
   "description": "## Índice",
-  "main": "bin/md-links/md-links.js",
+  "main": "src/api/md-links.js",
   "directories": {
     "test": "test"
   },
   "bin": {
-    "md-links": "bin/md-links/md-links.js"
+    "md-links": "src/bin/md-links.js"
   },
   "dependencies": {
     "jsdom": "^16.2.2",

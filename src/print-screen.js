@@ -11,7 +11,6 @@ function validatedLinkArray(links) {
             .then(results => {
                 resolve(results)
             })
-            .catch(error => console.log("bartata"));
     })
     return promise;
 }

@@ -4,10 +4,10 @@ const selectLinks = require('./select-links.js');
 const printScreen = require('./print-screen.js');
 
 function mdLinks() {
-    const path = userInput();
-    const mdFile = read(path.path);
+    const input = userInput();
+    const mdFile = read(input.path);
     const links = selectLinks(mdFile);
-    printScreen(path, links);
+    printScreen(input, links);
 }
 
 mdLinks();

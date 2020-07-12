@@ -3,9 +3,9 @@ function requestLink(link) {
     const promise = new Promise((resolve, reject) => {
         request(link, function (error, response, body) {
             if (error) {
-                reject(new Error('invalid link' + error));
+                resolve({ statusCode: 'broken' , body:'' });
             } else {
-                resolve({ response: response, body: body });
+                resolve({ statusCode: response.statusCode, body: body });
             }
         });
     });

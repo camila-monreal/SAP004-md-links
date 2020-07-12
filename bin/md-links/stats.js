@@ -9,7 +9,8 @@ function stats(links) {
         class400: class400.length,
         class500: class500.length
     };
-    console.log(statsResult);
+    return statsResult;
 }
 
 module.exports = stats;
+

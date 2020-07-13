@@ -15,7 +15,7 @@ function validatedLinkArray(links) {
     return promise;
 }
 
-function printScreen(input, links) {
+function printScreen(input, links, filePath) {
     if (input.options.indexOf('--stats') != -1 && input.options.indexOf('--validate') != -1) {
         validatedLinkArray(links).then(result => console.log(stats(result)))
     } else if (input.options.indexOf('--stats') != -1) {
@@ -25,12 +25,12 @@ function printScreen(input, links) {
             requestLink(link)
                 .then(result => {
                     if (input.options.indexOf('--validate') != -1) {
-                        console.log(input.path, link, result.statusCode, getCharacters(result.body).substr(0 - 50))
+                        console.log(filePath, link, result.statusCode, getCharacters(result.body).substr(0 - 50))
                     } else {
-                        console.log(input.path, link, getCharacters(result.body).substr(0 - 50))
+                        console.log(filePath, link, getCharacters(result.body).substr(0 - 50))
                     }
                 })
-                .catch(error => console.log(input.path, link, "Link not found"));
+                .catch(error => console.log(filePath, link, "Link not found"));
         });
     }
 }

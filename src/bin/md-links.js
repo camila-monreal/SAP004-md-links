@@ -6,9 +6,10 @@ const printScreen = require('../print-screen.js');
 
 function mdLinks() {
     const input = userInput();
-    const mdFile = read(input.path);
-    const links = selectLinks(mdFile);
-    printScreen(input, links);
+    read(input.path).forEach(mdFile => {
+        const links = selectLinks(mdFile.text);
+        printScreen(input, links, mdFile.path);
+    })
 }
 
 mdLinks();

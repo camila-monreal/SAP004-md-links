@@ -1,4 +1,4 @@
-const mdLinks = require("./md-links.js");
+const mdLinks = require("./md-links.js.js");
 
 mdLinks("../../../testes-md-file")
   .then(links => {

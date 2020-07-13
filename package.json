@@ -10,15 +10,19 @@
     "md-links": "src/bin/md-links.js"
   },
   "dependencies": {
+    "eslint": "^7.4.0",
     "jsdom": "^16.2.2",
     "request": "^2.88.2",
     "url": "^0.11.0",
     "valid": "^0.1.1",
     "valid-url": "^1.0.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
   "scripts": {
-    "test": "npm test"
+    "lint": "eslint --ext .js src/ test/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

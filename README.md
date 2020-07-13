@@ -1,4 +1,4 @@
-## md-links
+# md-links
 A md-links te ajuda a buscar facilmente e validar links existentes em arquivos Markdown. 
 
 ## Guia de instalação
@@ -6,8 +6,8 @@ A md-links te ajuda a buscar facilmente e validar links existentes em arquivos M
  `sudo npm install --global camila-monreal/md-links`
 
 * Para instalar e contribuir: 
-1 - Fork o projeto;
-2 - Clone (URL):  `git clone <URL do seu fork>`
+1. Fork o projeto;
+2. Clone (URL):  `git clone <URL do seu fork>`
  
 ## API exemplo de teste
 Deixei uma pasta chamada tests-md-file, dentro da pasta test. Essa pasta contém 02 arquivos md("Teste.md" e "Teste-2.md), com links e um exemplo de teste usando a API ("teste-api.js"). 
@@ -34,7 +34,7 @@ Através do StatusCode que virá por números é possivel identificar a situaç�
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate --stats`
 Esse comando retorna: Todos os links(all) | Links quebrados(Broken) | StatusCode class 400 | StatusCode class 500.
 
-### Especificação técnica 
+## Especificação técnica 
 * Node JS 
 * [JSDOM](https://github.com/jsdom/jsdom)
 * [REQUEST](https://github.com/request/request)

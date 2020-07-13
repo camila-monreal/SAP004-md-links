@@ -8,10 +8,14 @@ A md-links te ajuda a buscar facilmente e validar links existentes em arquivos M
 * Para instalar e contribuir: 
 1. Fork o projeto;
 2. Clone (URL):  `git clone <URL do seu fork>`
+
+***
  
 ## API exemplo de teste
 Deixei uma pasta chamada tests-md-file, dentro da pasta test. Essa pasta contém 02 arquivos md("Teste.md" e "Teste-2.md), com links e um exemplo de teste usando a API ("teste-api.js"). 
 No projeto nós temos a API, onde você pode importar a md-links para usar em um projeto node, o exemplo está no arquivo "teste-api.js".
+
+***
 
 ## CLI Executáveis
 * Para descobrir os links que contém em algum arquivo md:
@@ -28,11 +32,14 @@ Esse comando restorna:  Caminho do arquivo | Link | Título do link (Até 50 cha
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate`
 
 Esse comando retorna: Caminho do arquivo | Link | StatusCode | Título do link (Até 50 characters) 
+
 Através do StatusCode que virá por números é possivel identificar a situação do site, você pode consultar no link [HTTP Cats](https://http.cat/ ) o que significam cada StatusCode.
 
 * Para validar o link e retornar stats com o link validado:
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate --stats`
 Esse comando retorna: Todos os links(all) | Links quebrados(Broken) | StatusCode class 400 | StatusCode class 500.
+
+***
 
 ## Especificações técnicas 
 * Node JS 
@@ -40,6 +47,8 @@ Esse comando retorna: Todos os links(all) | Links quebrados(Broken) | StatusCode
 * [REQUEST](https://github.com/request/request)
 * [FS node](https://nodejs.org/docs/v0.3.1/api/fs.html)
 * Link do planejamento para criar o projeto [Board no Trello](https://trello.com/b/VFInzOLQ/md-links)
+
+***
 
 ### Débito técnico 
 TDD utilizando JEST 

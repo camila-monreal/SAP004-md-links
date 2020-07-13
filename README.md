@@ -34,10 +34,12 @@ Através do StatusCode que virá por números é possivel identificar a situaç�
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate --stats`
 Esse comando retorna: Todos os links(all) | Links quebrados(Broken) | StatusCode class 400 | StatusCode class 500.
 
-## Especificação técnica 
+## Especificações técnicas 
 * Node JS 
 * [JSDOM](https://github.com/jsdom/jsdom)
 * [REQUEST](https://github.com/request/request)
 * [FS node](https://nodejs.org/docs/v0.3.1/api/fs.html)
 * Link do planejamento para criar o projeto [Board no Trello](https://trello.com/b/VFInzOLQ/md-links)
 
+### Débito técnico 
+TDD utilizando JEST 

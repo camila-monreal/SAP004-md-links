@@ -26,9 +26,9 @@ Esse comando restorna:  Caminho do arquivo | Link | Título do link (Até 50 cha
 
 * Para validar o link: 
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate`
+
 Esse comando retorna: Caminho do arquivo | Link | StatusCode | Título do link (Até 50 characters) 
-Através do StatusCode que virá por números é possivel identificar a situação do site, você pode consultar no link [HTTP Cats](https://http.cat/ )
- o que significam cada StatusCode.
+Através do StatusCode que virá por números é possivel identificar a situação do site, você pode consultar no link [HTTP Cats](https://http.cat/ ) o que significam cada StatusCode.
 
 * Para validar o link e retornar stats com o link validado:
 `md-links <Caminho da pasta com vários arquivos md, ou o arquivo md específico> --validate --stats`
